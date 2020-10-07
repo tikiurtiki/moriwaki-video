@@ -1,0 +1,397 @@
+/******************************************************************
+
+Stylesheet: 600px以上のタブレットやモニタで適用
+
+******************************************************************/
+
+body {
+  font-size: 1.05rem;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+.dot-line {
+  width: 60%;
+  padding-bottom: 30px;
+}
+
+.header {
+  height: $pcHeaderHeight;
+  &__logo {
+    width: 280px;
+    height: 22px;
+  }
+}
+
+// グローバルメニュー
+.global-nav {
+  &__container {
+    position: absolute;
+    top: 65%;
+  }
+
+  &__list {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+}
+
+// ハンバーガーメニュー
+.humberger-menu {
+  transition: opacity 0.5s;
+  &:hover {
+    opacity: 0.6;
+  }
+  &__btn {
+    & > span {
+      width: 43px;
+      margin-bottom: 8px;
+    }
+  }
+}
+
+// ハンバーガーメニューがクリックされたとき
+.menu-open {
+  & .humberger-menu {
+    &__btn {
+      & > span {
+        &:nth-child(1) {
+          transform: translateY(10px) rotate(135deg);
+        }
+        &:nth-child(3) {
+          transform: translateY(-10px) rotate(-135deg);
+        }
+      }
+    }
+  }
+}
+
+.main-visual {
+  &__visual {
+    height: 500px;
+  }
+  &__catch-copy {
+    margin-bottom: 30px;
+    &--main {
+      font-size: 1.8rem;
+      margin-bottom: 5px;
+    }
+  }
+  .balloon3-right-btn {
+    top: -20px;
+    right: 80px;
+    width: 130px;
+    height: 130px;
+    font-size: 1.2rem;
+    padding: 35px 5px;
+  }
+  .balloon3-right-btn:before {
+    bottom: -10px;
+    left: 30px;
+    margin-top: -15px;
+    border: 20px solid transparent;
+    border-left: 20px solid #c4c4c4;
+  }
+}
+
+.gold-medal {
+  padding: 20px 0;
+  &__inner {
+    max-width: 450px;
+  }
+  &__text {
+    font-size: 1.1rem;
+    &--inner {
+      font-size: 14px;
+      display: block;
+    }
+  }
+}
+
+// PV
+.promotion-video {
+  &__inner {
+    padding: 50px 0;
+  }
+  &__title {
+    & > span {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.about {
+  background-position: 130% 50%;
+  background-size: 60%;
+}
+
+.promotion-video {
+  &__inner {
+    width: 70%;
+    max-width: $contentMaxWidth;
+  }
+}
+
+.shooting-scene {
+  padding-top: 50px;
+  background-color: $bgColor;
+  &__inner {
+    padding: 30px 0;
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+}
+
+.customer {
+  padding-top: 70px;
+  &__inner {
+    width: 60%;
+  }
+}
+
+// customer-videoの
+.close-btn {
+  &__btn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    cursor: pointer;
+    & > span {
+      width: 40px;
+      display: block;
+      height: $spHumbergerMenuHeight;
+      &:nth-child(1) {
+        transform: rotate(135deg);
+      }
+      &:nth-child(2) {
+        transform: translateY(-2px) rotate(-135deg);
+      }
+    }
+  }
+}
+
+// 料金とキャンペーン情報
+.money {
+  padding-top: 100px;
+  &__inner {
+    width: 70%;
+  }
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__plan {
+    margin-bottom: 50px;
+    background-position: 370px 60px;
+    background-size: 25%;
+  }
+  .plan {
+    &__inner {
+      padding: 30px 0;
+    }
+    &__title {
+      padding: 0 0px;
+      font-size: 1.1rem;
+      &::before,
+      &::after {
+        width: 80px;
+      }
+      &::before {
+        left: 80px;
+      }
+      &::after {
+        right: 80px;
+      }
+    }
+    &__money {
+      &--small {
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        font-size: 1.3rem;
+
+        &::before {
+          position: absolute;
+          top: 25px;
+          left: 50%;
+          width: 90px;
+          transform: rotate(10deg) translateX(-50%);
+        }
+      }
+      &--off {
+        font-size: 1.1rem;
+        margin: 20px 0 20px 0;
+      }
+      &--large {
+        font-size: 1.8rem;
+      }
+    }
+    &__text {
+      width: 70%;
+      margin-top: 50px;
+      padding-top: 20px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+  }
+  &__precautionary {
+    & > p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.feature {
+  padding-top: 100px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__inner {
+    width: 80%;
+  }
+  &__card {
+    margin-right: 20px;
+  }
+}
+
+.flow {
+  padding-top: 100px;
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__img-wrapper {
+    max-height: 150px;
+    & > img {
+      max-height: 150px;
+    }
+  }
+}
+
+// 質問
+.faq {
+  padding: 100px 0;
+  &__title {
+    padding-bottom: 50px;
+  }
+}
+.accordion {
+  margin-bottom: 30px;
+}
+
+// moriwakiVideoの思い
+.message {
+  padding: 50px 0;
+  &__video-title {
+    margin-bottom: 30px;
+  }
+  &__video-wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+.reservertion {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.contact {
+  padding-bottom: 100px;
+}
+
+// 予約ボタン（下に固定）
+.reserve-bottom-btn {
+  height: 110px;
+  &__btn {
+    font-size: 1.5rem;
+  }
+  &__balloon {
+    left: 150px;
+    font-size: 1.1rem;
+  }
+}
+
+// // 予約ボタン（下に固定する）
+// .reserve-bottom-btn {
+//   position: fixed;
+//   z-index: 1000;
+//   bottom: 0;
+//   left: 0;
+//   visibility: hidden;
+//   width: 100%;
+//   height: 90px;
+//   text-align: center;
+//   &__inner {
+//     position: absolute;
+//     z-index: 0;
+//     top: 0;
+//     left: 0;
+//     visibility: hidden;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   &__btn {
+//     // btnに上書き
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     visibility: hidden;
+//     padding: 14px 0;
+//     transition: opacity 0.3s, visibility 0.3s;
+//     transform: translate(-50%, -50%);
+//     opacity: 0;
+//   }
+//   // 吹き出し
+//   &__balloon {
+//     font-weight: bold;
+
+//     position: absolute;
+//     top: -15px;
+//     left: 10px;
+//     display: inline-block;
+//     visibility: hidden;
+//     min-width: 120px;
+//     max-width: 100%;
+//     margin: 1.5em 0;
+//     padding: 3px 13px;
+//     transition: opacity 0.3s, visibility 0.3s;
+//     transform: rotate(-8deg);
+//     opacity: 0;
+//     color: #fff;
+//     border-radius: 15px;
+//     background: #c4c4c4;
+//     background: #ffbb67;
+//     // box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+//     box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+//     &::before {
+//       position: absolute;
+//       z-index: 0;
+//       right: 37px;
+//       bottom: -21px;
+//       margin-top: -15px;
+
+//       content: "";
+//       transform: rotate(80deg);
+//       border: 15px solid transparent;
+//       border-left: 15px solid #c4c4c4;
+//       border-left: 15px solid #ffbb67;
+//     }
+//   }
+//   .inview & {
+//     visibility: visible;
+//     &__inner {
+//       visibility: visible;
+//       opacity: 0.6;
+//       background-color: #fff;
+//     }
+//     &__btn {
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//     &__balloon {
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//   }
+// }
